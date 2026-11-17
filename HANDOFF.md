@@ -115,6 +115,23 @@ smf.ols("positive_rate ~ C(price_band, Treatment('Free')) + log_reviews + C(year
 - [ ] 写最终总结，然后去掉 README 和简历里的“进行中”。
 - [ ] 下一个项目（已规划）：剧本杀 AI 推理助手，大模型 API + RAG 检索 + Streamlit 界面，对应 AI 开发岗位。
 
+## 在新电脑或新工具上继续
+
+这个项目不依赖任何特定的 AI 工具，换电脑、换模型都按下面的步骤来。GitHub 是唯一的同步点。
+
+1. 克隆仓库并安装依赖：
+   ```
+   cd $HOME\PycharmProjects
+   git clone https://github.com/XiXu0827/steam-games-analysis.git
+   cd steam-games-analysis
+   pip install -r requirements.txt
+   ```
+2. 下载数据（太大，不在仓库里）：从 [HF 数据页](https://huggingface.co/datasets/FronkonGames/steam-games-dataset/tree/main/data) 下载 `train-00000-of-00001.parquet`，放到项目里的 `data\` 文件夹并改名为 `games.parquet`。Windows 需要先打开“查看 → 显示 → 文件扩展名”，免得多出 `.tmp` 后缀。
+3. 每次开始工作前 `git pull`；结束后 `git add .`、`git commit -m "说明"`、`git push`。
+4. 台式机上原来的 `PycharmProjects\steam-analysis` 不是 Git 仓库，不能 pull/push。改用克隆出来的 `steam-games-analysis` 文件夹，把旧文件夹里的 `data\` 移过去即可。
+5. 简历文件在 `C:\Users\w2752\PycharmProjects\resume\`：`resume.html` 是可编辑的源文件（单页 A4，内容已满），`resume.pdf` 是导出版。改简历时编辑 html，再用浏览器打印为 PDF（A4、边距无、勾选背景图形）。简历含联系方式，**不要放进公开仓库**，换电脑时用网盘或 U 盘自己带过去。
+6. 只在 Claude 里才有的东西：这份报告的在线文档版、简历的设计画布、Claude GitHub App 的推送权限。换工具后以仓库里的 `HANDOFF.md` 和本地的 `resume.html` 为准；新工具推送代码用你自己电脑上的 Git 登录即可。
+
 ## 交给其他模型时的说明
 
 新对话开头先贴上这段话，再贴上本报告全文。如果对方能直接读项目文件夹，就让它读文件夹里的 `HANDOFF.md`（就是本文件）。
