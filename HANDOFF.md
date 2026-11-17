@@ -26,7 +26,7 @@
 
 ## 当前状态与文件位置
 
-本地项目文件夹：`C:\Users\w2752\PycharmProjects\steam-analysis`（Windows）。GitHub 仓库：`XiXu0827/steam-games-analysis`（公开，分支 `main`，目前 3 个提交）。本地和 GitHub 上的文件一致。Claude GitHub App 已安装在这个仓库上（仅此一个仓库），Claude 可以直接提交；其他工具用 git 推送也可以。
+本地项目文件夹：`C:\Users\w2752\PycharmProjects\steam-analysis`（Windows）。GitHub 仓库：`XiXu0827/steam-games-analysis`（公开，分支 `main`）。本地和 GitHub 上的文件一致。Claude GitHub App 已安装在这个仓库上（仅此一个仓库），Claude 可以直接提交；其他工具用 git 推送也可以。
 
 | 文件 | 说明 | GitHub 上 |
 | --- | --- | --- |
