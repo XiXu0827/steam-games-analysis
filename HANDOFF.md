@@ -16,7 +16,7 @@
 
 ## 工作内容
 
-两个阶段都在 2026 年 11 月 18 日完成，代码和图表已上传 GitHub（第二阶段文件待上传）。
+两个阶段都在 2026 年 11 月 18 日完成，代码、图表和本报告（HANDOFF.md）已全部上传 GitHub。
 
 | 阶段 | 工作内容 | 产出 |
 | --- | --- | --- |
@@ -26,18 +26,18 @@
 
 ## 当前状态与文件位置
 
-本地项目文件夹：`C:\Users\w2752\PycharmProjects\steam-analysis`（Windows）。GitHub 仓库：`XiXu0827/steam-games-analysis`（公开，分支 `main`，目前 2 个提交，都是网页上传）。第二阶段的文件只在本地，还没上传。
+本地项目文件夹：`C:\Users\w2752\PycharmProjects\steam-analysis`（Windows）。GitHub 仓库：`XiXu0827/steam-games-analysis`（公开，分支 `main`，目前 3 个提交）。本地和 GitHub 上的文件一致。Claude GitHub App 已安装在这个仓库上（仅此一个仓库），Claude 可以直接提交；其他工具用 git 推送也可以。
 
 | 文件 | 说明 | GitHub 上 |
 | --- | --- | --- |
 | `data/games.parquet` | 原始数据，约 192 MB（HF 仓库里的 `data/train-00000-of-00001.parquet`） | 不上传（已写入 `.gitignore`） |
 | `steam_analysis_phase1.ipynb` | 第一阶段 notebook，已运行，含输出 | 已上传 |
-| `steam_analysis_phase2.ipynb` | 第二阶段 notebook，已运行，含输出 | **未上传** |
-| `figures/01_…04_*.png` | 第一阶段 4 张图 | 已上传 |
-| `figures/05_…08_*.png` | 第二阶段 4 张图 | **未上传** |
-| `README.md` | 英文项目说明；本地版已包含第二阶段 | 旧版（只有第一阶段） |
-| `requirements.txt` | 本地版已加 `statsmodels` | 旧版 |
-| `.gitignore` | 忽略 `data/`、`.ipynb_checkpoints/`、`__pycache__/` | 已有 |
+| `steam_analysis_phase2.ipynb` | 第二阶段 notebook，已运行，含输出 | 已上传 |
+| `figures/01_…08_*.png` | 两个阶段共 8 张图 | 已上传 |
+| `README.md` | 英文项目说明，含两个阶段的发现 | 已上传 |
+| `requirements.txt` | 依赖列表，含 `statsmodels` | 已上传 |
+| `.gitignore` | 忽略 `data/`、`.ipynb_checkpoints/`、`__pycache__/` | 已上传 |
+| `HANDOFF.md` | 本报告的 Markdown 版 | 已上传 |
 | `games.parquet.tmp` | 多余的数据副本，可删除 | — |
 
 **运行环境：** Windows，已装 Python。需要 `pandas`、`pyarrow`、`matplotlib`、`statsmodels`、`jupyter`。notebook 用相对路径（`data/games.parquet`、`figures/`），需要在项目根目录下启动。
@@ -109,7 +109,7 @@ smf.ols("positive_rate ~ C(price_band, Treatment('Free')) + log_reviews + C(year
 
 ## 待办与下一步
 
-- [ ] 把第二阶段文件上传 GitHub：`steam_analysis_phase2.ipynb`、`figures/05–08`、新版 `README.md` 和 `requirements.txt`。网页上传会自动跳过以点开头的文件和超过 25 MB 的文件。
+- [ ] 以后每次更新 notebook、图表或 README，都同步提交到 GitHub，并更新本报告和 `HANDOFF.md`。
 - [ ] 删除两个多余的数据副本：项目文件夹里的 `games.parquet.tmp`，以及“下载”里的 `6a5383ed-4071-43af-9135-70654937ee65.tmp`。
 - [ ] 第三阶段（收尾）：做稳健性检验，比如把评价数门槛换成 50 重新跑回归；可以补充游戏时长（`average_playtime_forever`）、平台（`windows` / `mac` / `linux`）、`dlc_count` 等还没用过的变量。注意 `metacritic_score` 为 0 表示缺失。
 - [ ] 写最终总结，然后去掉 README 和简历里的“进行中”。
